@@ -7,6 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\Admin-Template\**" />
+    <Content Remove="wwwroot\Admin-Template\**" />
+    <EmbeddedResource Remove="wwwroot\Admin-Template\**" />
+    <None Remove="wwwroot\Admin-Template\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Mantis-Bootstrap-1.0.0\.DS_Store" />
+    <None Include="wwwroot\Mantis-Bootstrap-1.0.0\dist\.DS_Store" />
+    <None Include="wwwroot\Mantis-Bootstrap-1.0.0\src\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.1">
       <PrivateAssets>all</PrivateAssets>
@@ -17,6 +30,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
 </Project>

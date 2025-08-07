@@ -1,0 +1,27 @@
+﻿@model List<Category>
+
+@{
+    ViewData["Title"] = "Kategoriler";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <td>Id</td>
+        <td>Kategori Ad</td>
+        <td>İşlemler</td>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryId</td>
+            <td>@item.CategoryName</td>
+            <td>
+                <a href="" class="btn btn-outline-danger">Sil</a>
+                <a href="" class="btn btn-outline-primary">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="" class="btn btn-outline-success">Ekle</a>
+

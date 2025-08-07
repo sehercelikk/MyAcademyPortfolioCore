@@ -1,8 +1,18 @@
+
+using Portfolio.Web.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<DataContext>();
+
+//Life Time Türleri
+//AddScoped : Ýstek süresi kadar tut
+//AddTransient
+//AddSingleton
+
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
